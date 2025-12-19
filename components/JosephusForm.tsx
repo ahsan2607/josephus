@@ -35,7 +35,7 @@ export default function JosephusForm() {
   return (
     <div className="max-w-md mx-auto mt-10 p-5 border rounded-lg shadow-sm space-y-4">
       <h2 className="text-lg font-semibold text-gray-800">
-        Josephus Problem
+        Kita cari siapa yang harus jaga di kejar-kejaran ini!
       </h2>
 
       <div className="space-y-1">
@@ -53,7 +53,7 @@ export default function JosephusForm() {
 
       <div className="space-y-1">
         <label className="text-sm font-medium text-gray-700">
-          Langkah eliminasi (k)
+          Langkah Eliminasi
         </label>
         <input
           type="number"
@@ -90,7 +90,7 @@ export default function JosephusForm() {
       {result && (
         <div className="mt-4 p-3 bg-gray-50 border rounded-md">
           <p className="text-sm text-gray-700">
-            Orang terakhir:
+            Orang yang terpilih:
             <span className="ml-1 font-semibold text-gray-900">
               {result}
             </span>
