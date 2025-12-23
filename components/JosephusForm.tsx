@@ -23,8 +23,8 @@ export default function JosephusForm() {
 
       const res =
         mode === "iterative"
-          ? josephusIterative(participants, k)
-          : josephusRecursive(participants, k);
+          ? josephusIterative(participants, k, participants.length)
+          : josephusRecursive(participants, k, participants.length);
 
       setResult(res);
     } catch (err) {

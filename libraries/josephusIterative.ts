@@ -1,32 +1,34 @@
 export function josephusIterative(
   participants: string[],
-  k: number
+  k: number,
+  n: number,
 ): string {
-  if (participants.length === 0 || k <= 0) {
+  if (participants.length === 0 || k <= 0 || n <= 0) {
     throw new Error("Input tidak valid");
-  }
+  } else {
+    const arr = [...participants];
+    if (n !== arr.length) {
+      throw new Error("n harus sama dengan jumlah peserta");
+    } else {
+      let index = 0;
+      while (n > 1) {
+        let steps = 1;
 
-  const arr = [...participants];
-  let size = arr.length;
-  let index = 0;
+        while (steps < k) {
+          index++;
+          if (index >= n) { index = 0 }
+          steps++;
+        }
 
-  while (size > 1) {
-    let steps = 1;
+        for (let i = index; i < n - 1; i++) {
+          arr[i] = arr[i + 1];
+        }
+        n--;
 
-    while (steps < k) {
-      index++;
-      if (index >= size) index = 0;
-      steps++;
+        if (index >= n) { index = 0 }
+      }
+      window.alert("Ini pakai Iteratif");
+      return arr[0];
     }
-
-    for (let i = index; i < size - 1; i++) {
-      arr[i] = arr[i + 1];
-    }
-    size--;
-
-    if (index >= size) index = 0;
   }
-
-  window.alert("Ini pakai Iteratif");
-  return arr[0];
 }
