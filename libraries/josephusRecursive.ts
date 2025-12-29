@@ -10,7 +10,6 @@ export function josephusRecursive(
     if (n !== arr.length) {
       throw new Error("n harus sama dengan jumlah peserta");
     } else {
-      window.alert("Ini pakai Rekursif");
       return eliminate(arr, n, k, 0);
     }
   }

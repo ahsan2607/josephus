@@ -27,7 +27,6 @@ export function josephusIterative(
 
         if (index >= n) { index = 0 }
       }
-      window.alert("Ini pakai Iteratif");
       return arr[0];
     }
   }
