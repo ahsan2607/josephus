@@ -142,7 +142,7 @@ export default function JosephusVisualization({ participants, k, mode }: Props) 
             x={centerX}
             y={centerY + radius + 80}
             textAnchor="middle"
-            fill="#10b981"
+            fill="#059669"
             fontSize="28" // smaller winner text
             fontWeight="bold"
           >
@@ -152,7 +152,7 @@ export default function JosephusVisualization({ participants, k, mode }: Props) 
       </svg>
 
       <div className="flex flex-col items-center">
-        <div className="text-lg font-semibold text-gray-700">
+        <div className="text-lg font-semibold text-black">
           {" "}
           {currentStep} dari {eliminationSteps.length}
         </div>
@@ -161,9 +161,9 @@ export default function JosephusVisualization({ participants, k, mode }: Props) 
           <button
             onClick={() => setIsPlaying((p) => !p)}
             disabled={isFinished}
-            className="px-5 py-2 bg-blue-600 text-white rounded-lg text-sm" // smaller button
+            className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm" // smaller button
           >
-            {isPlaying ? "Pause" : "Play"}
+            {isPlaying ? "Jeda" : "Mulai"}
           </button>
 
           <button
@@ -171,7 +171,7 @@ export default function JosephusVisualization({ participants, k, mode }: Props) 
               setCurrentStep(0);
               setIsPlaying(true);
             }}
-            className="px-5 py-2 bg-gray-600 text-white rounded-lg text-sm" // smaller
+            className="px-5 py-2 bg-green-700 hover:bg-green-800 text-white rounded-lg text-sm" // smaller
           >
             Ulangi
           </button>
@@ -185,7 +185,7 @@ export default function JosephusVisualization({ participants, k, mode }: Props) 
               setCurrentStep(Number(e.target.value));
               setIsPlaying(false);
             }}
-            className="w-64" // shorter slider
+            className="w-64 accent-blue-600" // shorter slider
           />
         </div>
       </div>

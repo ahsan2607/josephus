@@ -37,7 +37,7 @@ export default function JosephusForm() {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-indigo-50 to-blue-100 py-8 px-4">
+    <div className="min-h-screen bg-linear-to-b from-indigo-100 to-blue-400 py-8 px-4">
       <div className="max-w-4xl mx-auto space-y-8">
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -78,14 +78,14 @@ export default function JosephusForm() {
 
             <button
               onClick={handleCalculate}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-md text-md transition"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md text-md transition"
             >
               Mulai Visualisasi
             </button>
 
             {winner && (
-              <div className="mt-2 p-3 bg-green-100 border border-green-500 rounded-md text-center">
-                <p className="text-lg font-bold text-green-800">Terpilih: {winner}</p>
+              <div className="mt-2 p-3 bg-green-100 border border-green-600 rounded-md text-center">
+                <p className="text-lg font-bold text-green-600">Terpilih: {winner}</p>
               </div>
             )}
           </div>
